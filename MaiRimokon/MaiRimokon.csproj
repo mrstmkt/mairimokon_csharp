@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0534E57F-7981-4DC9-B177-3A7C4FC9D232}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaiRimokon</RootNamespace>
+    <AssemblyName>MaiRimokon</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comm.cs" />
+    <Compile Include="DebugComm.cs" />
+    <Compile Include="IRFrame.cs" />
+    <Compile Include="IRReader.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMaiRButton.cs" />
+    <Compile Include="MaiRButtonPropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRButtonPropertiesControl.Designer.cs">
+      <DependentUpon>MaiRButtonPropertiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaiRButtonView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRButtonView.Designer.cs">
+      <DependentUpon>MaiRButtonView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaiRControlValue.cs" />
+    <Compile Include="MaiRimoconData.cs" />
+    <Compile Include="IMaiRPanel.cs" />
+    <Compile Include="MaiRPanel1View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRPanel1View.Designer.cs">
+      <DependentUpon>MaiRPanel1View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRButtonPropertiesControl.resx">
+      <DependentUpon>MaiRButtonPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRButtonView.resx">
+      <DependentUpon>MaiRButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRPanel1View.resx">
+      <DependentUpon>MaiRPanel1View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadForm.resx">
+      <DependentUpon>ReadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRPanel2View.resx">
+      <DependentUpon>MaiRPanel2View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRPanel3View.resx">
+      <DependentUpon>MaiRPanel3View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRPanel4View.resx">
+      <DependentUpon>MaiRPanel4View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaiRPanelPropertiesControl.resx">
+      <DependentUpon>MaiRPanelPropertiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings3.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PulseDrawPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadForm.Designer.cs">
+      <DependentUpon>ReadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerialComm.cs" />
+    <Compile Include="MaiRPanel2View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRPanel2View.Designer.cs">
+      <DependentUpon>MaiRPanel2View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaiRPanel3View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRPanel3View.Designer.cs">
+      <DependentUpon>MaiRPanel3View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaiRPanel4View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRPanel4View.Designer.cs">
+      <DependentUpon>MaiRPanel4View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="ValueChangedEventArgs.cs" />
+    <Compile Include="MaiRPanelPropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaiRPanelPropertiesControl.Designer.cs">
+      <DependentUpon>MaiRPanelPropertiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlConvert.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
